@@ -17,20 +17,26 @@ A collection of Python lab programs organised assignment-wise, following the col
 | Assignment-09 | Pandas | 4 |
 | Assignment-10 | Matplotlib and data visualisation | 5 |
 
-**Total: 60 programs.** Files follow the original assignment and question order. Document line breaks and indentation have been repaired to make separate Python files executable.
+**Total: 58 programs.** The `Assignment-01` to `Assignment-10` folders retain the manual-based source versions. Improved versions of programs with identified issues are provided in matching folders under `Corrected/`.
 
-## Notes about incomplete or corrected source
+## Corrected versions
 
-- **Assignment 1, Q4:** The manual gives `sqrt(b*b) - (4*c*a)` as the expression passed to `math.sqrt`. It has been preserved as written; it is not the standard quadratic discriminant and may fail for some inputs.
-- **Assignment 5, Q6:** The supplied manual omits the first-set input statement, but the remaining code refers to `s1`. The file marks this missing section rather than guessing it.
-- **Assignment 6, Q5:** The manual defines `Fibonacci` but calls `fibonacci`; the name is made consistent.
-- **Assignment 7, Q5:** The manual maps over `l2` for the tuple conversion; this is changed to `t1` to match the question.
-- **Assignment 8, Q3:** The two-column page layout interleaves separate examples. They have been separated, and the clipped sorting statement is reconstructed as `np.sort(arr4)`.
+The `Corrected/` directory contains versions with input validation, boundary-case handling, and fixes for identified logic errors. Original files are retained in the assignment folders for comparison.
+
+Notable corrections include quadratic roots, invalid triangle sides, division by zero, grade validation, perfect-number zero handling, consonant counting, prime-factor integer division, whitespace-safe word processing, list-size validation, Fibonacci boundary cases, safe dictionary input, missing set input, rectangular matrix transpose, and empty-list ratio handling.
+
+**Manual ambiguities:** Assignment 5, Q6's missing first-set input is supplied as an inferred line and is commented in the corrected file. Assignment 8, Q3's clipped sorting example is reconstructed as `np.sort(arr4)`.
 
 ## Run a program
 
+Original:
 ```bash
 python Assignment-01/Q01_Arithmetic_Operations.py
+```
+
+Corrected:
+```bash
+python Corrected/Assignment-01/Q04_Quadratic_Equation_Roots.py
 ```
 
 ## Install dependencies
@@ -39,4 +45,4 @@ python Assignment-01/Q01_Arithmetic_Operations.py
 pip install -r requirements.txt
 ```
 
-Python 3.x is required. Third-party packages are listed in `requirements.txt`.
+Python 3.x is required. NumPy, Pandas, and Matplotlib are used in Assignments 8–10.
